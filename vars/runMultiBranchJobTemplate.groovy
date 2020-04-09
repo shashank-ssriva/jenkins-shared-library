@@ -1,14 +1,22 @@
 def call(Map config = [:]) {
     def runMavenBuild = config.runMavenBuild
-    node {
+    pipeline {
+        agent any
+
+        stages {
             stage('Build Java src') {
+                steps {
                     if (config.runMavenBuild){
-                    runMavenBuild true
+                    runMavenBuild()
                     }
                 }
-            
+            }
+
             stage('Build Anugular src') {
-                    runAngularBuild
+                steps {
+                    runAngularBuild()
                 }
+            }
         }
     }
+}
