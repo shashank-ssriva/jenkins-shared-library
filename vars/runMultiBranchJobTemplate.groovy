@@ -6,13 +6,17 @@ def call(Map config = [:]) {
         stages {
             stage('Build Java src') {
                 steps {
-                    runMavenBuild false
+                    if (config.runMavenBuild) {
+                    runMavenBuild
+                    }
                 }
             }
 
             stage('Build Anugular src') {
                 steps {
+                    if (config.runAngularBuild) {
                     runAngularBuild
+                    }
                 }
             }
         }
