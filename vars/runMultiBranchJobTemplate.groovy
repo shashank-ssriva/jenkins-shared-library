@@ -5,8 +5,11 @@ def call(Map config = [:]) {
 
         stages {
             stage('Build Java src') {
+                if(config.runMavenBuild)
+                {
                 steps {
                     runMavenBuild
+                }
                 }
             }
 
