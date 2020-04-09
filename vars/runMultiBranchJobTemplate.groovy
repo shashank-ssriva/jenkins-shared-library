@@ -1,5 +1,5 @@
 def call(Map config = [:]) {
-    def repoName = config.runMavenBuild
+    def runMavenBuild = config.runMavenBuild
     pipeline {
         agent any
 
