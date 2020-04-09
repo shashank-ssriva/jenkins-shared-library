@@ -3,12 +3,12 @@ def call(Map config = [:]) {
     node {
             stage('Build Java src') {
                     if (config.runMavenBuild){
-                    runMavenBuild
+                    runMavenBuild true
                     }
                 }
             
             stage('Build Anugular src') {
-                    runAngularBuild
+                    runAngularBuild true
                 }
         }
     }
