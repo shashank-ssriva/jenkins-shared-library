@@ -15,6 +15,6 @@ def call(Map config = [:]) {
                     runAngularBuild
                 }
             }
+        }
     }
-}
 }
