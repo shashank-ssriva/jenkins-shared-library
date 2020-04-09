@@ -1,4 +1,4 @@
-def call(Map config = [:]) {
+def call() {
 
     pipeline {
         agent any
@@ -6,17 +6,13 @@ def call(Map config = [:]) {
         stages {
             stage('Build Java src') {
                 steps {
-                    script {
                     runMavenBuild
-                    }
                 }
             }
 
             stage('Build Anugular src') {
                 steps {
-                    script {
                     runAngularBuild
-                    }
                 }
             }
         }
