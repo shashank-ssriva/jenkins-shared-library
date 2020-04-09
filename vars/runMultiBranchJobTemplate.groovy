@@ -6,7 +6,7 @@ def call(Map config = [:]) {
         stages {
             stage('Build Java src') {
                 steps {
-                    runMavenBuild
+                    runMavenBuild false
                 }
             }
 
