@@ -8,7 +8,7 @@ def call(Map config = [:]) {
                 }
             
             stage('Build Anugular src') {
-                    runAngularBuild true
+                    runAngularBuild
                 }
         }
     }
