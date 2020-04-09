@@ -1,20 +1,12 @@
-def call(Map config = [:]) {
+def call() {
 
     pipeline {
         agent any
 
         stages {
-            stage('Build Java src') {
-                steps {
-                    runMavenBuild false
-                }
-            }
-
             stage('Build Anugular src') {
                 steps {
-                    script {
                     runAngularBuild
-                    }
                 }
             }
         }
