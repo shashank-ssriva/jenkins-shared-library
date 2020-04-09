@@ -14,7 +14,7 @@ def call(Map config = [:]) {
                 }
             }
 
-            stage('Build Anugular src') {
+            stage('Build Angular src') {
                 steps {
                     script {
                     runAngularBuild()
