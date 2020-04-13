@@ -19,6 +19,7 @@ def call(Map config = [:]) {
                 steps {
                     script {
                     runAngularBuild()
+                    echo "This is the Environment to use ${environmentId}"
                 }
                 }
             }
