@@ -1,5 +1,6 @@
 def call(Map config = [:]) {
     def runMavenBuild = config.runMavenBuild
+    def environmentId = config.environmentId
     pipeline {
         agent any
 
